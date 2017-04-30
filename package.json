@@ -1,0 +1,27 @@
+{
+  "name": "react_test",
+  "version": "1.0.0",
+  "description": "I don't know what this description is meant to describe.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel www/src/jsx -d www/build/js && babili www/build/js -d www/dist/js",
+    "build_backup": "babel www/src/jsx -d www/build/js && babili www/build/js -d www/dist/js && ./combine.sh",
+    "babel": "babel",
+    "babel-version": "babel --version",
+    "babel-ugly": "babili www/js/appjs -d www/js/appjsmin"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-uglify": "^1.0.2",
+    "babel-preset-babili": "0.0.12",
+    "babili": "0.0.12"
+  }
+}
