@@ -1,0 +1,11 @@
+
+
+"postinstall": "npm run prod:deploy",
+
+
+  "plugins": ["transform-react-jsx"],
+  "env": {
+    "production": {
+      "presets": ["babili"]
+    }
+  }

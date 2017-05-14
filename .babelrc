@@ -1,8 +1,5 @@
 {
-  "plugins": ["transform-react-jsx"],
-  "env": {
-    "production": {
-      "presets": ["babili"]
-    }
-  }
+  "presets": [ "es2015", "react" ],
+  //"plugins": ["transform-runtime"],
+  "comments": false
 }

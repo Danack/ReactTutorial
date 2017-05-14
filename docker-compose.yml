@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  npm:
+    build: docker/yarn
+    volumes:
+      - ./:/var/app
+#    ports:
+#      - "8081:80"
+    environment:
+      FOO: bar
