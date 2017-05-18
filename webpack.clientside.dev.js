@@ -1,8 +1,5 @@
 let path = require("path"),
-  webpack = require('webpack'),
-  autoprefixer = require('autoprefixer-core');
-
-let CompressionPlugin = require("compression-webpack-plugin");
+  webpack = require('webpack');
 
 module.exports = {
   context: __dirname,
@@ -11,41 +8,17 @@ module.exports = {
   devtool: "source-map",
 
   entry: {
-    index: './src/app.js',
+    app: './www/js_src/app.js',
     vendor: ['react', 'react-dom'],
   },
 
   output: {
-    path: path.resolve('./www/js/'),
+    path: path.resolve('./www/js_dev/'),
     filename: "[name].js"
   },
 
   plugins: [
-    // new webpack.ProvidePlugin({
-    //   React: "React", react: "React", "window.react": "React", "window.React": "React"
-    // }),
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
-    }),
-    // new webpack.optimize.DedupePlugin(), //dedupe similar code
-    new webpack.optimize.UglifyJsPlugin({
-      compress: { warnings: false },
-      mangle: true,
-      comments: false,
-      sourceMap: false,
-      minimize: true
-    }),
-    new webpack.optimize.AggressiveMergingPlugin(), //Merge chunks
-    // new CompressionPlugin({
-    //   asset: "[path].gz[query]",
-    //   algorithm: "gzip",
-    //   test: /\.js$|\.css$|\.html$/,
-    //   threshold: 10240,
-    //   minRatio: 0.8
-    // }),
   ],
 
 
@@ -66,7 +39,10 @@ module.exports = {
       // { test: /\.eot($|\?)/, loader: "file" },
       // { test: /\.svg($|\?)/, loader: "url?limit=10000&minetype=image/svg+xml" },
 
-      { test: /\.(sass|scss)$/, use: ['style-loader', 'css-loader', 'sass-loader', ] }
+      { test: /\.(sass|scss)$/, use: ['style-loader', 'css-loader', 'sass-loader', ] },
+
+      // // I want to uglify with mangling only app files, not thirdparty libs
+      // { test: /.*\/app\/.*\.js$/, loader: "uglify-loader", exclude: /.spec.js/}
     ]
   },
 

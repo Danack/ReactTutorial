@@ -1,11 +1,20 @@
+ autoprefixer
+ autoprefixer-core
+ css-loader
+ csswring": "^6.0.0",
+   eslint": "^2.5.3",
+   eslint-plugin-react": "^4.2.3",
+file-loader
+ image-webpack-loader
+ node-sass
+ normalize.css
+ react-headroom": "latest",
+ react-motion": "latest",
+ react-transform-catch-errors": "^1.0.0",
+ react-transform-hmr": "^1.0.1",
+ react-youtube": "latest",
+  sass-loader": "^2.0.0",
+  script-loader": "^0.6.1",
+  style-loader": "^0.17.0",
 
-
-"postinstall": "npm run prod:deploy",
-
-
-  "plugins": ["transform-react-jsx"],
-  "env": {
-    "production": {
-      "presets": ["babili"]
-    }
-  }
+   babel-core babel-loader babel-plugin-transform-runtime babel-preset-env babel-preset-es2015 babel-preset-react babili-webpack-plugin compression-webpack-plugin webpack webpack-config webpack-dev-server webpack-uglify-js-plugin

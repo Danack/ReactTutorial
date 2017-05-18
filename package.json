@@ -5,50 +5,30 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "clean": "node ./bin/clean.js",
-    "dev:watch:webpack": "webpack -d --watch --colors --config ./webpack.clientside.dev.js",
-    "dev:build": "webpack -d --colors --config ./webpack.clientside.dev.js",
-    "dev": "npm run dev:watch",
-    "dev:watch": "node ./bin/server/hotReload.js",
-    "prod:build": "webpack -d --colors --progress --config ./webpack.clientside.prod.js"
+    "dev:build": "webpack --colors --config ./webpack.clientside.dev.js",
+    "dev:build:watch": "webpack --colors --watch --config ./webpack.clientside.dev.js",
+    "prod:build": "webpack --colors --progress --config ./webpack.clientside.prod.js",
+    "prod:build:watch": "webpack --colors --progress --config ./webpack.clientside.prod.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "webpack-cli": "^1.3.1"
   },
   "devDependencies": {
-    "autoprefixer": "^5.2.0",
-    "autoprefixer-core": "^5.2.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.4.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babili-webpack-plugin": "^0.0.11",
     "compression-webpack-plugin": "^0.4.0",
-    "css-loader": "^0.28.1",
-    "csswring": "^6.0.0",
-    "eslint": "^2.5.3",
-    "eslint-plugin-react": "^4.2.3",
-    "file-loader": "^0.11.1",
-    "image-webpack-loader": "^3.3.1",
-    "node-sass": "^3.2.0",
-    "normalize.css": "^3.0.3",
-    "react-headroom": "latest",
-    "react-motion": "latest",
-    "react-transform-catch-errors": "^1.0.0",
-    "react-transform-hmr": "^1.0.1",
-    "react-youtube": "latest",
-    "sass-loader": "^2.0.0",
-    "script-loader": "^0.6.1",
-    "style-loader": "^0.17.0",
-    "uglifyjs-webpack-plugin": "^0.4.3",
     "webpack": "^2.5.1",
     "webpack-config": "^7.0.0",
-    "webpack-dev-server": "^1.10.1",
+    "webpack-dev-server": "^2.4.5",
     "webpack-uglify-js-plugin": "^1.1.9"
   }
 }

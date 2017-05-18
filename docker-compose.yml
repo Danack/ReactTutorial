@@ -5,7 +5,6 @@ services:
     build: docker/yarn
     volumes:
       - ./:/var/app
-#    ports:
-#      - "8081:80"
+      - ./node_modules:/var/app/node_modules
     environment:
       FOO: bar

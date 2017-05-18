@@ -7,41 +7,14 @@ import Clock from './jsx/clock.jsx';
 import simple_form from './jsx/simple_form.jsx';
 import WeatherForecast from './jsx/weather_forecast.jsx';
 
-
-
-
-
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-// This is a comment
-
-
-
-
-
 ReactDOM.render(
   <Clock />,
   document.getElementById('clock')
 );
+
+// require('./images/myImage.gif');
+// require('./styles/styles.css');
+// require('./index.html');
 
 // ReactDOM.render(
 //   <HelloElement name="PHPSW" />,
