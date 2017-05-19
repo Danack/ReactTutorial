@@ -24,7 +24,7 @@ WORKDIR /var/app
 
 # RUN yarn
 
-# CMD cd /var/app && yarn install --check-files && yarn run dev:build:watch
+CMD cd /var/app && yarn install --check-files && yarn run dev:build:watch
 
-CMD tail -f /var/app/readme.MD
+# CMD tail -f /var/app/readme.MD
 

@@ -22,7 +22,7 @@ function weather_fetcher(city, onSuccess) {
 function weather_fetcher_stub(city, onSuccess) {
   let data = [{
     "dt": 12345,
-    "temp": "20",
+    "temp": "21",
     "time": "Thur 3pm",
     "description": "warm grey",
     "icon": "http://openweathermap.org/img/w/03d.png"

@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import hello_element from './jsx/hello_element.jsx';
+import HelloElement from './jsx/hello_element.jsx';
 import Clock from './jsx/clock.jsx';
 import simple_form from './jsx/simple_form.jsx';
 import WeatherForecast from './jsx/weather_forecast.jsx';
