@@ -12,9 +12,11 @@ This set of docker container includes:
 
 # How to use this demo
 
+0. `compose install` the dependencies 
+
 1. `docker compose up --build` the box
  
-2. Wait a bit. The first run takes a while as, the files are downloaded, but then subsequent runs are quick.
+2. Wait a bit. The first run takes a while as the files are downloaded but then subsequent runs are quick.
 
 3. Be amazed at web page with react on it running at 127.0.0.1
 
@@ -42,8 +44,7 @@ docker exec -it reacttutorial_web_1 php vendor/bin/phinx migrate
 
 ### Snapshot the database
 
-@TODO
-
+@TODO I haven't figured out escaping command line args.
 
 ### Using DB snapshots 
 
