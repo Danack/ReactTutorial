@@ -8,12 +8,12 @@ module.exports = {
   devtool: "source-map",
 
   entry: {
-    app: './www/js_src/app.js',
+    app: './public/js_src/app.js',
     vendor: ['react', 'react-dom'],
   },
 
   output: {
-    path: path.resolve('./www/js_dev/'),
+    path: path.resolve('./public/js_dev/'),
     filename: "[name].js"
   },
 

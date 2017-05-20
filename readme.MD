@@ -18,6 +18,13 @@
 yarn add babel-preset-es2015 --dev
 ```
 
+### Run the DB migrations
+
+docker exec -it reacttutorial_web_1 php vendor/bin/phinx migrate
+
+### Snapshot the database
+
+docker exec -it reacttutorial_web_1 bash scripts/backup_db.sh
 
 ### Login to the docker box
 

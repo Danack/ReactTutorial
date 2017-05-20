@@ -6,7 +6,7 @@ let path = require("path"),
 let CompressionPlugin = require("compression-webpack-plugin");
 
 config.output = {
-  path: path.resolve('./www/js_dist/'),
+  path: path.resolve('./public/js_dist/'),
   filename: "[name].js"
 };
 

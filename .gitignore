@@ -1,5 +1,6 @@
 node_modules/
-
+vendor/
+data/
 .yarn-cache.tgz
-www/js_dist
-www/js_dev
+public/js_dist
+public/js_dev

@@ -1,10 +1,33 @@
 version: '2'
 
 services:
-  npm:
+  yarn:
     build: docker/yarn
     volumes:
       - ./:/var/app
       - ./node_modules:/var/app/node_modules
+  db:
+    build: docker/db
     environment:
-      FOO: bar
+      MYSQL_ROOT_PASSWORD: "dev_root"
+      MYSQL_DATABASE: example
+      MYSQL_USER: example_user
+      MYSQL_PASSWORD: example_pass
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./data/mysql_backup:/tmp/mysql_backup
+  web:
+    build: docker/web
+    volumes:
+          - ./:/var/www
+    depends_on:
+      - db
+    environment:
+      WEBROOT: /var/www/public/
+      FOO: "BAR"
+    volumes:
+      - ./:/var/www/
+    ports:
+      - "80:80"
