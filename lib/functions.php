@@ -1,7 +1,6 @@
 <?php
 
 
-
 function foo() {
     return "bar";
 }
@@ -36,8 +35,8 @@ There should be a weather forecast here:<br/>
 
 </body>
 
-<script src="/js_dist/vendor.js"></script>
-<script src="/js_dist/app.js"></script>
+<script src="/js_dev/vendor.js"></script>
+<script src="/js_dev/app.js"></script>
 </html>
 
 HTML;
