@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 
 // import styles from './assets/stylesheets/application.css';
-
+import style from '../../../styles/main.scss';
 
 
 class WeatherSearchBox extends React.Component {
@@ -49,7 +49,7 @@ function ListItem(props) {
     const styles = {width: '100px', marginBottom: "-35px"};
 
     return (
-      <li><span>{wc.time}
+      <li className="weather_condition"><span>{wc.time}
           <img src={"" + wc.icon} style={styles}/> {wc.description} : {wc.temp}
       </span></li>)
 }
@@ -58,10 +58,11 @@ class WeatherResults extends React.Component {
   render() {
     const listItems = this.props.weather_conditions.map((weather_condition) =>
       <ListItem key={weather_condition.dt}
-                weather_condition={weather_condition} />
+                weather_condition={weather_condition}
+                 />
     );
     return (
-      <div >
+      <div>
         {listItems}
       </div>
     );

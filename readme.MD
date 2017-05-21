@@ -37,6 +37,11 @@ bash into it
  
 `docker-compose down`
 
+### Bring up a single box
+
+```
+docker-compose up --build yarn
+```
 
 ### Run the DB migrations
 

@@ -4,3 +4,7 @@ data/
 .yarn-cache.tgz
 public/js_dist
 public/js_dev
+public/styles/app.css
+public/styles/app.css.map
+public/vendor.js
+public/vendor.js.map

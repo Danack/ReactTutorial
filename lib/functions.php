@@ -14,13 +14,17 @@ function displayStuff() {
     $debugString .= "<br/>";
     $debugString .= \Example\Foo::test();
 
+
+    $filemtime = filemtime(__DIR__ . "/../public/styles/app.css");
+    $filemtime = intval($filemtime);
+
     $HTML = <<< HTML
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8" />
     <title>Hello World</title>
-
+    <link rel="stylesheet" type="text/css" href="/styles/app.css" data-original="/styles/app.css">
 </head>
 <body>
 
@@ -37,6 +41,9 @@ There should be a weather forecast here:<br/>
 
 <script src="/js_dev/vendor.js"></script>
 <script src="/js_dev/app.js"></script>
+
+<script src="/js_src/live_css_update.js"></script>
+
 </html>
 
 HTML;
