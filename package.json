@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "dev:build": "webpack --colors --config ./webpack.clientside.dev.js",
-    "dev:build:watch": "webpack --colors --watch --config ./webpack.clientside.dev.js",
-    "prod:build": "webpack --colors --progress --config ./webpack.clientside.prod.js",
-    "prod:build:watch": "webpack --colors --progress --config ./webpack.clientside.prod.js"
+    "dev:build": "webpack --colors --config ./yarn/webpack.clientside.dev.js",
+    "dev:build:watch": "webpack --colors --watch --config ./yarn/webpack.clientside.dev.js",
+    "prod:build": "webpack --colors --progress --config ./yarn/webpack.clientside.prod.js",
+    "prod:build:watch": "webpack --colors --progress --config ./yarn/webpack.clientside.prod.js"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +28,7 @@
     "compression-webpack-plugin": "^0.4.0",
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^2.1.0",
+    "google-fonts-webpack-plugin": "^0.3.2",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
