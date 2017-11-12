@@ -12,7 +12,7 @@ This set of docker container includes:
 
 # How to use this demo
 
-0. `compose install` the dependencies 
+0. `composer install` the dependencies 
 
 1. `docker compose up --build` the box
  
