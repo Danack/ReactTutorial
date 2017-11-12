@@ -14,7 +14,7 @@ This set of docker container includes:
 
 0. `composer install` the dependencies 
 
-1. `docker compose up --build` the box
+1. `docker-compose up --build` the box
  
 2. Wait a bit. The first run takes a while as the files are downloaded but then subsequent runs are quick.
 
