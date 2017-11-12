@@ -22,9 +22,9 @@ VOLUME ["/var/app/node_modules"]
 
 WORKDIR /var/app/
 
-# CMD cd /var/app && yarn install --check-files && npm rebuild node-sass && yarn run dev:build:watch
+CMD cd /var/app && yarn install --check-files && npm rebuild node-sass && yarn run dev:build:watch
 
 # For debugging, not having yarn run constantly can be nice.
 # Switching the real CMD to this makes life easier.
-CMD tail -f /var/app/readme.MD
+# CMD tail -f /var/app/readme.MD
 
